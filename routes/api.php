@@ -33,3 +33,4 @@ Route::delete('/blogs/{id}/delete', [BlogController::class, 'delete'])->middlewa
 Route::post('/blogs/{blog_id}/comments/create', [CommentController::class, 'create'])->middleware('auth:sanctum');
 Route::get('/blogs/{blog_id}/comments', [CommentController::class, 'list']);
 Route::put('/comments/{comments_id}/update', [CommentController::class, 'update'])->middleware('auth:sanctum');
+Route::delete('/comments/{comments_id}/delete', [CommentController::class, 'delete'])->middleware('auth:sanctum');
